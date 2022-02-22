@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_state_management/day1_counter/controller/counter_controller.dart';
+import 'controller/counter_controller.dart';
 
 class GetX1 extends StatelessWidget {
   final counterC = Get.put(CounterController());
