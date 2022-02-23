@@ -17,10 +17,10 @@ class GetX2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: GetX<CountControl>(
+        child: GetBuilder<CountControl>(
           init: CountControl(),
           builder: (controller) => Text(
-            'Angka ${controller.count.value}',
+            'Angka ${controller.count}',
             style: TextStyle(fontSize: 30),
           ),
         ),
