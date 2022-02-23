@@ -2,13 +2,17 @@ import 'package:get/get.dart';
 import 'package:getx_state_management/getx2_state_manager/models/orang.dart';
 
 class OrangController extends GetxController {
-  var orang = Orang();
+  var orang = Orang(nama: 'agus', umur: 25).obs;
 
   void changeUppercase() {
-    orang.nama.value = orang.nama.value.toUpperCase();
+    orang.update((_) {
+      orang.value.nama = orang.value.nama.toString().toUpperCase();
+    });
   }
 
   void changeLowercase() {
-    orang.nama.value = orang.nama.value.toLowerCase();
+    orang.update((_) {
+      orang.value.nama = orang.value.nama.toString().toLowerCase();
+    });
   }
 }

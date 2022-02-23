@@ -23,7 +23,7 @@ class GetX2 extends StatelessWidget {
               //   style: TextStyle(fontSize: 30),
               // ),
               Text(
-            'Nama Saya ${orangC.orang.nama}',
+            'Nama Saya ${orangC.orang.value.nama}',
             style: TextStyle(fontSize: 30),
           ),
         ),
