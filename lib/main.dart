@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_state_management/getx2_state_manager/getx2.dart';
+import 'package:getx_state_management/getx3_uniqueID/get3.dart';
 
 import 'getx1_counter/controller/counter_controller.dart';
 import 'getx1_counter/getx1.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return Obx(
       () => MaterialApp(
         theme: counterC.isDark.value ? ThemeData.dark() : ThemeData.light(),
-        home: GetX2(),
+        home: Get3(),
       ),
     );
   }
