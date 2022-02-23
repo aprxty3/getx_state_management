@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +15,7 @@ class Get3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GetBuilder<CountID>(
-              id: '', // ini namanya unique ID
+              id: 'anwar', // ini namanya unique ID hanya ada di GetBuilder
               builder: (_) => Text(
                 'Angka ${countC.count}',
                 style: TextStyle(
@@ -22,6 +24,7 @@ class Get3 extends StatelessWidget {
               ),
             ),
             GetBuilder<CountID>(
+              id: 'joni',
               builder: (_) => Text(
                 'Angka ${countC.count}',
                 style: TextStyle(
@@ -52,6 +55,11 @@ class CountID extends GetxController {
 
   void add() {
     count++;
-    update();
+    update(
+      [
+        'anwar',
+        'joni',
+      ],
+    );
   }
 }
