@@ -10,11 +10,7 @@ class Get4 extends StatelessWidget {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => OtherPage(),
-              ),
-            ),
+            onPressed: () => Get.to(() => OtherPage()),
             icon: Icon(
               Icons.chevron_right,
             ),
