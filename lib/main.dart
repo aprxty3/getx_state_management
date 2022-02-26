@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   // final counterC = Get.put(CounterController());
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData.light(),
       home: Get4(),
     );
