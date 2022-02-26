@@ -1,10 +1,10 @@
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
-class CountControl extends GetxController {
-  var count = 0;
+// class CountControl extends GetxController {
+//   var count = 0;
 
-  void increment() {
-    count++;
-    update();
-  }
-}
+//   void increment() {
+//     count++;
+//     update();
+//   }
+// }
