@@ -10,7 +10,7 @@ class Controller extends GetxController {
 
   @override
   void onInit() {
-    // Workers
+    //Kelima function dibawah atau disebut Workers, hanya dapat berjalan di onInit()
 
     // TODO: Ever Berguna untuk melihat single data yg berjalan
     // ever(
