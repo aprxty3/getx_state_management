@@ -25,6 +25,10 @@ class CountWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<CountController>(
+      initState: (state) => print('initstate'),
+      dispose: (state) => print('dispose'),
+      didChangeDependencies: (_) => print('didChangeDependencies'),
+      didUpdateWidget: (oldWidget, state) => print('didUpdateWidget'),
       builder: (c) => Center(
         child: Text('Angka ${c.count}'),
       ),
