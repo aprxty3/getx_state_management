@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Get6_1 extends StatelessWidget {
+class Get6_5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class Get6_1 extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               child: Text(
-                'Next Page',
+                'Back Page',
                 style: TextStyle(
                   fontSize: 30,
                 ),
