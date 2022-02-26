@@ -3,11 +3,14 @@ import 'package:get/get.dart';
 
 class Get4 extends StatelessWidget {
   final countC = Get.put(CountController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: CountWidget(),
+      body: Center(
+        child: CountWidget(),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           countC.add();
@@ -21,8 +24,10 @@ class CountWidget extends StatelessWidget {
   // final c = Get.find<CountController>();
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(
-      builder: (c) => Text('Angka ${c}'),
+    return GetBuilder<CountController>(
+      builder: (c) => Center(
+        child: Text('Angka ${c.count}'),
+      ),
     );
   }
 }
