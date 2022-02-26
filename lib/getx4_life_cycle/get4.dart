@@ -7,9 +7,22 @@ class Get4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: Text('Angka 0'),
+      body: CountWidget(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          countC.add();
+        },
       ),
+    );
+  }
+}
+
+class CountWidget extends StatelessWidget {
+  // final c = Get.find<CountController>();
+  @override
+  Widget build(BuildContext context) {
+    return GetBuilder(
+      builder: (c) => Text('Angka ${c}'),
     );
   }
 }
