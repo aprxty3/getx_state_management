@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Get6_3 extends StatelessWidget {
   @override
@@ -6,7 +7,7 @@ class Get6_3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Navigation',
+          'Page 3',
         ),
       ),
       body: Center(
