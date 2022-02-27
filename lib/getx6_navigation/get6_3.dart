@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_state_management/getx6_navigation/get6_4.dart';
 
 class Get6_3 extends StatelessWidget {
   @override
@@ -15,7 +16,9 @@ class Get6_3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(Get6_4());
+              },
               child: Text(
                 'Next Page',
                 style: TextStyle(
@@ -27,7 +30,9 @@ class Get6_3 extends StatelessWidget {
               height: 30,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.back();
+              },
               child: Text(
                 'Back Page',
                 style: TextStyle(

@@ -15,7 +15,9 @@ class Get6_5 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.back();
+              },
               child: Text(
                 'Back Page',
                 style: TextStyle(
