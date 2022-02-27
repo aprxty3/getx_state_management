@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_state_management/getx6_navigation/get6_4.dart';
+import 'package:getx_state_management/getx6_navigation/routes/route_name.dart';
 
 class Get6_3 extends StatelessWidget {
   @override
@@ -17,7 +18,7 @@ class Get6_3 extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Get.to(Get6_4());
+                Get.toNamed(RouteName.page_4);
               },
               child: Text(
                 'Next Page',
