@@ -10,6 +10,7 @@ import 'package:getx_state_management/getx7_dynamic_url/detail_page.dart';
 import 'package:getx_state_management/getx7_dynamic_url/get7.dart';
 import 'package:getx_state_management/getx7_dynamic_url/product_page.dart';
 import 'package:getx_state_management/getx8_snackbar/get8.dart';
+import 'package:getx_state_management/getx9_dialog/get9.dart';
 
 import 'getx1_counter/controller/counter_controller.dart';
 import 'getx1_counter/getx1.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData.light(),
-      home: Get8(),
+      home: Get9(),
       // getPages: [
       //   GetPage(name: '/product', page: () => ProductPage()),
       //   GetPage(name: '/detail', page: () => DetailPage()),
