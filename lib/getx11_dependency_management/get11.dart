@@ -27,7 +27,11 @@ class Get11 extends StatelessWidget {
 
 class NextPage extends StatelessWidget {
   // final MyController c = Get.find();
-  final c = Get.put(MyController(), permanent: true);
+  final c = Get.put(
+    MyController(),
+    permanent: true,
+    tag: 'tag-count',
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +62,11 @@ class NextPage extends StatelessWidget {
 }
 
 class TextPage extends StatelessWidget {
-  final c = Get.find<MyController>();
+  final c = Get.put(
+    MyController(),
+    permanent: false,
+    tag: 'tag-text',
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
