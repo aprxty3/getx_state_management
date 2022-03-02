@@ -5,6 +5,18 @@ class Get8 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Halo'),
+            ),
+          );
+        },
+        child: Icon(
+          Icons.add,
+        ),
+      ),
     );
   }
 }
