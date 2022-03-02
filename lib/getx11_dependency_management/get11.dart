@@ -62,11 +62,13 @@ class NextPage extends StatelessWidget {
 }
 
 class TextPage extends StatelessWidget {
-  final c = Get.put(
-    MyController(),
-    permanent: false,
-    tag: 'tag-text',
-  );
+  // final c = Get.put(
+  //   MyController(),
+  //   permanent: false,
+  //   tag: 'tag-text',
+  // );
+
+  final c = Get.find<MyController>(tag: 'tag-text');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
