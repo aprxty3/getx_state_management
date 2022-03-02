@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Get10 extends StatelessWidget {
   @override
@@ -7,14 +8,39 @@ class Get10 extends StatelessWidget {
       appBar: AppBar(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showModalBottomSheet(
-            context: context,
-            builder: (context) {
-              return Container(
-                // height: 200,
-                color: Colors.amber,
-                child: Center(
-                    child: Column(
+          // showModalBottomSheet(
+          //   context: context,
+          //   builder: (context) {
+          //     return Container(
+          //       // height: 200,
+          //       color: Colors.amber,
+          //       child: Center(
+          //           child: Column(
+          //         children: [
+          //           Text('Halo'),
+          //           TextField(
+          //             decoration: InputDecoration(
+          //               border: OutlineInputBorder(),
+          //             ),
+          //           ),
+          //         ],
+          //       )),
+          //     );
+          //   },
+          // );
+
+          Get.bottomSheet(
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(20),
+                ),
+                color: Colors.red,
+              ),
+              // height: 200,
+              // color: Colors.amber,
+              child: Center(
+                child: Column(
                   children: [
                     Text('Halo'),
                     TextField(
@@ -23,9 +49,9 @@ class Get10 extends StatelessWidget {
                       ),
                     ),
                   ],
-                )),
-              );
-            },
+                ),
+              ),
+            ),
           );
         },
         child: Icon(
