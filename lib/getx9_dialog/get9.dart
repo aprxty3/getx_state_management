@@ -21,9 +21,51 @@ class Get9 extends StatelessWidget {
           // );
 
           Get.defaultDialog(
-            title: 'Ini Judul',
-            middleText: 'Ini Deskripsi',
-          );
+              title: 'Ini Judul',
+              middleText: 'Ini Deskripsi',
+              backgroundColor: Colors.blueAccent,
+              radius: 10,
+              barrierDismissible: false,
+
+              //Default
+              textCancel: 'Batal',
+              cancelTextColor: Colors.green,
+              onCancel: () {
+                Get.back();
+              },
+
+              //Custom
+              cancel: ElevatedButton(
+                onPressed: () {
+                  Get.back();
+                },
+                child: Text('Batal'),
+              ),
+
+              //Default
+              textConfirm: 'Oke',
+              confirmTextColor: Colors.red,
+              onConfirm: () {},
+
+              //Custom
+              confirm: ElevatedButton(
+                onPressed: () {},
+                child: Text('oke'),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Pilihan 1'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Pilihan 2'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Pilihan 3'),
+                ),
+              ]);
         },
         child: Icon(
           Icons.add,
