@@ -21,7 +21,11 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // final myC = Get.put(MyController());
-  final c = Get.lazyPut(() => MyController(), tag: 'tag-text');
+  final c = Get.lazyPut(
+    () => MyController(),
+    tag: 'tag-text',
+    fenix: true,
+  );
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
