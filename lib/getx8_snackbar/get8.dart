@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Get8 extends StatelessWidget {
   @override
@@ -7,11 +8,13 @@ class Get8 extends StatelessWidget {
       appBar: AppBar(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Halo'),
-            ),
-          );
+          // ScaffoldMessenger.of(context).showSnackBar(
+          //   SnackBar(
+          //     content: Text('Halo'),
+          //   ),
+          // );
+
+          Get.snackbar('Ini Judul', 'Ini Isi');
         },
         child: Icon(
           Icons.add,
