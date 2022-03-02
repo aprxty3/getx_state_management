@@ -20,7 +20,7 @@ import 'getx1_counter/getx1.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final myC = Get.put(MyController());
+  // final myC = Get.put(MyController());
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
