@@ -20,16 +20,12 @@ import 'getx1_counter/getx1.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // final counterC = Get.put(CounterController());
+  final myC = Get.put(MyController());
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData.light(),
       home: Get11(),
-      // getPages: [
-      //   GetPage(name: '/product', page: () => ProductPage()),
-      //   GetPage(name: '/detail', page: () => DetailPage()),
-      // ],
     );
   }
 }
