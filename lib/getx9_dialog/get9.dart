@@ -20,52 +20,63 @@ class Get9 extends StatelessWidget {
           //   },
           // );
 
-          Get.defaultDialog(
-              title: 'Ini Judul',
-              middleText: 'Ini Deskripsi',
-              backgroundColor: Colors.blueAccent,
-              radius: 10,
-              barrierDismissible: false,
+          // Get.defaultDialog(
+          //     title: 'Ini Judul',
+          //     middleText: 'Ini Deskripsi',
+          //     backgroundColor: Colors.blueAccent,
+          //     radius: 10,
+          //     barrierDismissible: false,
 
-              //Default
-              textCancel: 'Batal',
-              cancelTextColor: Colors.green,
-              onCancel: () {
-                Get.back();
-              },
+          //     //Default
+          //     textCancel: 'Batal',
+          //     cancelTextColor: Colors.green,
+          //     onCancel: () {
+          //       Get.back();
+          //     },
 
-              //Custom
-              cancel: ElevatedButton(
-                onPressed: () {
-                  Get.back();
-                },
-                child: Text('Batal'),
-              ),
+          //     //Custom
+          //     cancel: ElevatedButton(
+          //       onPressed: () {
+          //         Get.back();
+          //       },
+          //       child: Text('Batal'),
+          //     ),
 
-              //Default
-              textConfirm: 'Oke',
-              confirmTextColor: Colors.red,
-              onConfirm: () {},
+          //     //Default
+          //     textConfirm: 'Oke',
+          //     confirmTextColor: Colors.red,
+          //     onConfirm: () {},
 
-              //Custom
-              confirm: ElevatedButton(
-                onPressed: () {},
-                child: Text('oke'),
-              ),
-              actions: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Pilihan 1'),
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Pilihan 2'),
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Pilihan 3'),
-                ),
-              ]);
+          //     //Custom
+          //     confirm: ElevatedButton(
+          //       onPressed: () {},
+          //       child: Text('oke'),
+          //     ),
+          //     actions: [
+          //       ElevatedButton(
+          //         onPressed: () {},
+          //         child: Text('Pilihan 1'),
+          //       ),
+          //       ElevatedButton(
+          //         onPressed: () {},
+          //         child: Text('Pilihan 2'),
+          //       ),
+          //       ElevatedButton(
+          //         onPressed: () {},
+          //         child: Text('Pilihan 3'),
+          //       ),
+          //     ]);
+
+          // Get.dialog(
+          //   Icon(Icons.ac_unit),
+
+          // Container(),
+          // Text('data'),
+          // AlertDialog(
+          //   title: Text('Ini Judul'),
+          //   content: Text('Ini Deskripsi'),
+          // ),
+          // );
         },
         child: Icon(
           Icons.add,
