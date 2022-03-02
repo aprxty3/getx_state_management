@@ -77,6 +77,14 @@ class Get9 extends StatelessWidget {
           //   content: Text('Ini Deskripsi'),
           // ),
           // );
+          Get.generalDialog(
+            pageBuilder: (context, _, __) {
+              return AlertDialog(
+                title: Text('Ini Judul'),
+                content: Text('Ini Deskripsi'),
+              );
+            },
+          );
         },
         child: Icon(
           Icons.add,
