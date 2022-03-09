@@ -1,36 +1,36 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
-import 'controller.dart';
+// import 'controller.dart';
 
-class ShopItem extends StatelessWidget {
-  final shopC = Get.find<Controller>();
+// class ShopItem extends StatelessWidget {
+//   final shopC = Get.find<Controller>();
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        IconButton(
-          onPressed: () {
-            shopC.kuantitas.value--;
-            Get.find<Controller>(tag: 'total').total_kuantitas.value--;
-          },
-          icon: Icon(Icons.remove),
-        ),
-        Obx(() => Text(
-              '${shopC.kuantitas}',
-              style: TextStyle(fontSize: 25),
-            )),
-        IconButton(
-          onPressed: () {
-            shopC.kuantitas.value++;
-            Get.find<Controller>(tag: 'total').total_kuantitas.value++;
-          },
-          icon: Icon(Icons.add),
-        ),
-      ],
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(
+//       mainAxisAlignment: MainAxisAlignment.spaceAround,
+//       children: [
+//         IconButton(
+//           onPressed: () {
+//             shopC.kuantitas.value--;
+//             Get.find<Controller>(tag: 'total').total_kuantitas.value--;
+//           },
+//           icon: Icon(Icons.remove),
+//         ),
+//         Obx(() => Text(
+//               '${shopC.kuantitas}',
+//               style: TextStyle(fontSize: 25),
+//             )),
+//         IconButton(
+//           onPressed: () {
+//             shopC.kuantitas.value++;
+//             Get.find<Controller>(tag: 'total').total_kuantitas.value++;
+//           },
+//           icon: Icon(Icons.add),
+//         ),
+//       ],
+//     );
+//   }
+// }
