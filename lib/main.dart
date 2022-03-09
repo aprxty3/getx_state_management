@@ -4,6 +4,7 @@ import 'package:getx_state_management/getx10_bottom_sheet/get10.dart';
 import 'package:getx_state_management/getx11_dependency_management/get11.dart';
 import 'package:getx_state_management/getx12_getPutAsync/get12.dart';
 import 'package:getx_state_management/getx13_getCreate/get13.dart';
+import 'package:getx_state_management/getx14_bindings/get14.dart';
 import 'package:getx_state_management/getx2_state_manager/getx2.dart';
 import 'package:getx_state_management/getx3_uniqueID/get3.dart';
 import 'package:getx_state_management/getx4_life_cycle/get4.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData.light(),
-      home: Get13(),
+      home: Get14(),
     );
   }
 }
