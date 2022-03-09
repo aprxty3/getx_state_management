@@ -15,7 +15,7 @@ class ShopItem extends StatelessWidget {
         IconButton(
           onPressed: () {
             shopC.kuantitas.value--;
-            shopC.total_kuantitas.value--;
+            Get.find<Controller>(tag: 'total').total_kuantitas.value--;
           },
           icon: Icon(Icons.remove),
         ),
@@ -26,7 +26,7 @@ class ShopItem extends StatelessWidget {
         IconButton(
           onPressed: () {
             shopC.kuantitas.value++;
-            shopC.total_kuantitas.value++;
+            Get.find<Controller>(tag: 'total').total_kuantitas.value++;
           },
           icon: Icon(Icons.add),
         ),

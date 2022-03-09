@@ -4,7 +4,8 @@ import 'package:getx_state_management/getx13_getCreate/controller.dart';
 import 'package:getx_state_management/getx13_getCreate/shop_item.dart';
 
 class ShopPage extends StatelessWidget {
-  final shopC = Get.put(Controller());
+  final shopC = Get.put(Controller(), tag: 'total');
+  final kuantitasC = Get.create(() => Controller());
 
   @override
   Widget build(BuildContext context) {
