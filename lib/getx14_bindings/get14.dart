@@ -20,9 +20,7 @@ class Get14 extends StatelessWidget {
               style: TextStyle(fontSize: 30),
             ),
             ElevatedButton(
-              onPressed: () => Get.to(
-                CountPage(),
-              ),
+              onPressed: () => Get.toNamed('/count'),
               child: Text('To The Moon'),
             ),
           ],
