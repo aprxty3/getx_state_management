@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:getx_state_management/getx14_bindings/bindings.dart';
 import 'package:getx_state_management/getx14_bindings/route_name.dart';
 import 'package:getx_state_management/getx6_navigation/routes/route_name.dart';
 
@@ -15,11 +16,7 @@ class AppPages {
     GetPage(
       name: RouteName.count,
       page: () => CountPage(),
-      binding: BindingsBuilder(
-        () {
-          Get.put(CountController());
-        },
-      ),
+      binding: CountB(),
     ),
   ];
 }
