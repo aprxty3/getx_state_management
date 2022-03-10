@@ -8,6 +8,7 @@ import 'package:getx_state_management/getx14_bindings/controller.dart';
 import 'package:getx_state_management/getx14_bindings/count_page.dart';
 import 'package:getx_state_management/getx14_bindings/get14.dart';
 import 'package:getx_state_management/getx14_bindings/routes.dart';
+import 'package:getx_state_management/getx15_translations/get15.dart';
 import 'package:getx_state_management/getx2_state_manager/getx2.dart';
 import 'package:getx_state_management/getx3_uniqueID/get3.dart';
 import 'package:getx_state_management/getx4_life_cycle/get4.dart';
@@ -30,8 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData.light(),
-      home: Get14(),
-      getPages: AppPages.pages,
+      home: Get15(),
     );
   }
 }
