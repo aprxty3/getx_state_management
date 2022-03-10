@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_state_management/getx14_bindings/count_page.dart';
+import 'package:getx_state_management/getx14_bindings/route_name.dart';
 
 class Get14 extends StatelessWidget {
   const Get14({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class Get14 extends StatelessWidget {
               style: TextStyle(fontSize: 30),
             ),
             ElevatedButton(
-              onPressed: () => Get.toNamed('/count'),
+              onPressed: () => Get.toNamed(RouteName.count),
               child: Text('To The Moon'),
             ),
           ],
