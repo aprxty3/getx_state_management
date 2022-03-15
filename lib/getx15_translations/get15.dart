@@ -25,7 +25,10 @@ class Get15 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'home_title'.tr,
+              'home_title'.trParams({
+                'kakak': 'ani',
+                'adik': 'marga',
+              }),
               style: TextStyle(
                 fontSize: 25,
               ),

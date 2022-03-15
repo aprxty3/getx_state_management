@@ -10,7 +10,7 @@ class MyTranslation extends Translations {
           'body': 'Click Me',
         },
         'id': {
-          'home_title': 'Rumah',
+          'home_title': 'Rumah @kakak dan @adik',
           'body': 'Klik Saya',
         },
         'en_btw': {
