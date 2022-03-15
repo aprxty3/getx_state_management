@@ -12,6 +12,10 @@ class MyTranslation extends Translations {
         'id': {
           'home_title': 'Rumah',
           'body': 'Klik Saya',
-        }
+        },
+        'en_btw': {
+          'home_title': 'Rumeh',
+          'body': 'Klik aye',
+        },
       };
 }

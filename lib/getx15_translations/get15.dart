@@ -9,6 +9,16 @@ class Get15 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Homepage'),
+        actions: [
+          IconButton(
+            onPressed: () => Get.updateLocale(
+              Locale('en', 'btw'),
+            ),
+            icon: Icon(
+              Icons.refresh,
+            ),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
