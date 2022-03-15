@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Get15 extends StatelessWidget {
   const Get15({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Get15 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Homepage',
+              'home_title'.tr,
               style: TextStyle(
                 fontSize: 25,
               ),
@@ -24,7 +25,7 @@ class Get15 extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Text('Click Me'),
+              child: Text('body'.tr),
             ),
           ],
         ),
