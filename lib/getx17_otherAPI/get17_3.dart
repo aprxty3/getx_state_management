@@ -15,18 +15,14 @@ class Get17_3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Hai ini third Page',
+              '${Get.previousRoute}',
               style: TextStyle(fontSize: 25),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'Next Page',
-                style: TextStyle(fontSize: 25),
-              ),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
       ),
     );
   }
