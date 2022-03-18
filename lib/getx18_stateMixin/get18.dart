@@ -13,17 +13,24 @@ class Get18 extends GetView<MyC> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(
-              () => Text(
-                "${controller.count}",
-                style: TextStyle(fontSize: 25),
+            controller.obx(
+              (state) => Column(
+                children: [
+                  Text("ID : ${state!["id"]}"),
+                  Text("Nama : ${state["first_name"] + state["last_name"]}"),
+                  Text("Email : ${state["email"]}"),
+                  Image.network("${state["avatar"]}"),
+                ],
               ),
+              onLoading: Text('Loading......'),
+              onEmpty: Text('Belum ada Data'),
+              onError: (error) => Text('Terjadi Kesalahan'),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => controller.add(),
+        onPressed: () => controller.getData(),
       ),
     );
   }
