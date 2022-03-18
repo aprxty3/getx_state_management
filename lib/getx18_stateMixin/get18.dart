@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_state_management/getx18_stateMixin/controlle.dart';
 
-class Get18 extends StatelessWidget {
+class Get18 extends GetView<MyC> {
   @override
   Widget build(BuildContext context) {
-    final myc = Get.find<MyC>();
     return Scaffold(
       appBar: AppBar(
         title: Text('Ini Homepage'),
@@ -16,7 +15,7 @@ class Get18 extends StatelessWidget {
           children: [
             Obx(
               () => Text(
-                "${myc.count}",
+                "${controller.count}",
                 style: TextStyle(fontSize: 25),
               ),
             ),
@@ -24,7 +23,7 @@ class Get18 extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => myc.add(),
+        onPressed: () => controller.add(),
       ),
     );
   }
