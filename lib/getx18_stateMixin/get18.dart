@@ -3,10 +3,9 @@ import 'package:get/get.dart';
 import 'package:getx_state_management/getx18_stateMixin/controlle.dart';
 
 class Get18 extends StatelessWidget {
-  final myc = Get.find<MyC>();
-
   @override
   Widget build(BuildContext context) {
+    final myc = Get.find<MyC>();
     return Scaffold(
       appBar: AppBar(
         title: Text('Ini Homepage'),
