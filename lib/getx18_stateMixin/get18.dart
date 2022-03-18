@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_state_management/getx18_stateMixin/controlle.dart';
 
 class Get18 extends StatelessWidget {
-  const Get18({Key? key}) : super(key: key);
+  final myc = Get.find<MyC>();
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +14,18 @@ class Get18 extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [],
+          children: [
+            Obx(
+              () => Text(
+                "${myc.count}",
+                style: TextStyle(fontSize: 25),
+              ),
+            ),
+          ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => myc.add(),
       ),
     );
   }
