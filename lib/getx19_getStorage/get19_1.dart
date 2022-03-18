@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_state_management/getx19_getStorage/%20controller/auth.dart';
+import 'package:getx_state_management/getx19_getStorage/%20controller/login_controller.dart';
 
 class Get19_1 extends StatelessWidget {
-  const Get19_1({Key? key}) : super(key: key);
+  final c = Get.find<LoginC>();
+  final auth = Get.find<AuthC>();
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +20,7 @@ class Get19_1 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
+                controller: c.emailC,
                 autocorrect: false,
                 decoration: InputDecoration(
                   labelText: 'email',
@@ -26,18 +30,30 @@ class Get19_1 extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              TextField(
-                autocorrect: false,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  border: OutlineInputBorder(),
+              Obx(
+                () => TextField(
+                  controller: c.passwordC,
+                  autocorrect: false,
+                  obscureText: c.hidden.value,
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    border: OutlineInputBorder(),
+                    suffixIcon: IconButton(
+                      onPressed: () => c.hidden.toggle(),
+                      icon: c.hidden.isTrue
+                          ? Icon(
+                              Icons.remove_red_eye,
+                            )
+                          : Icon(Icons.remove_red_eye_outlined),
+                    ),
+                  ),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => auth.login(c.emailC.text, c.passwordC.text),
                 child: Text('LOGIN'),
               ),
             ],
