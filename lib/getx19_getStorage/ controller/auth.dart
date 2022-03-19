@@ -66,8 +66,15 @@ class AuthC extends GetxController {
     }
   }
 
-  @override
-  void onInit() async {
-    super.onInit();
+  void logOut(bool rememberMe) {
+    if (rememberMe == false) {
+      final box = GetStorage();
+      if (box.read("dataUser") != null) {
+        box.erase();
+      }
+    }
+    //haput storage
+
+    isAuth.value = false;
   }
 }
