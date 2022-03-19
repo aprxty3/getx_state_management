@@ -14,10 +14,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() => GetMaterialApp(
-          theme: ThemeData.light(),
-          home: authC.isAuth.isTrue ? Get19_0() : Get19_1(),
-          getPages: AppPage.pages,
-        ));
+    return FutureBuilder(
+      future: authC.autoLogin(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          return Obx(
+            () => GetMaterialApp(
+              theme: ThemeData.light(),
+              home: authC.isAuth.isTrue ? Get19_0() : Get19_1(),
+              getPages: AppPage.pages,
+            ),
+          );
+        }
+        return MaterialApp(
+          home: Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(),
+            ),
+          ),
+        );
+      },
+    );
   }
 }
