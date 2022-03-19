@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:getx_state_management/getx19_getStorage/route/route_name.dart';
 import 'package:get_storage/get_storage.dart';
 
 class AuthC extends GetxController {
@@ -15,6 +14,18 @@ class AuthC extends GetxController {
       title: "Terjadi Kesalahan",
       middleText: msg,
     );
+  }
+
+  Future<void> autoLogin() async {
+    final box = GetStorage();
+    if (box.read("dataUser") != null) {
+      final data = box.read("dataUser") as Map<String, dynamic>;
+      login(
+        data["email"],
+        data["password"],
+        data["rememberMer"],
+      );
+    }
   }
 
   void login(String email, String password, bool rememberMe) async {
@@ -37,7 +48,7 @@ class AuthC extends GetxController {
           } else {
             //hapus storage
             final box = GetStorage();
-            if (box.read('dataUser') != null) {
+            if (box.read("dataUser") != null) {
               box.erase();
             }
           }
