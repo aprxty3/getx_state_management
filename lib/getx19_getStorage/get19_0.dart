@@ -16,6 +16,10 @@ class Get19_0 extends StatelessWidget {
           children: [],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.logout),
+      ),
     );
   }
 }
