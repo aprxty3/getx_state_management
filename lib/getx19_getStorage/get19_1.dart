@@ -52,8 +52,18 @@ class Get19_1 extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
+              Obx(() => CheckboxListTile(
+                    value: c.rememberMe.value,
+                    onChanged: (value) => c.rememberMe.toggle(),
+                    title: Text('Remember Me'),
+                    controlAffinity: ListTileControlAffinity.leading,
+                  )),
               ElevatedButton(
-                onPressed: () => auth.login(c.emailC.text, c.passwordC.text),
+                onPressed: () => auth.login(
+                  c.emailC.text,
+                  c.passwordC.text,
+                  c.rememberMe.value,
+                ),
                 child: Text('LOGIN'),
               ),
             ],

@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:getx_state_management/getx19_getStorage/route/route_name.dart';
+import 'package:get_storage/get_storage.dart';
 
 class AuthC extends GetxController {
   var isAuth = false.obs;
@@ -16,10 +17,31 @@ class AuthC extends GetxController {
     );
   }
 
-  void login(String email, String password) {
+  void login(String email, String password, bool rememberMe) async {
     if (email != '' && password != '') {
       if (GetUtils.isEmail(email)) {
         if (email == _dataUser['email'] && password == _dataUser['password']) {
+          if (rememberMe) {
+            await GetStorage.init();
+
+            //simpan di storage di get storage
+            final box = GetStorage();
+            box.write(
+              'dataUser',
+              {
+                "email": email,
+                "password": password,
+                "rememberMe": rememberMe,
+              },
+            );
+          } else {
+            //hapus storage
+            final box = GetStorage();
+            if (box.read('dataUser') != null) {
+              box.erase();
+            }
+          }
+
           //Berhasil Login
           isAuth.value = true;
         } else {
@@ -31,5 +53,10 @@ class AuthC extends GetxController {
     } else {
       dialogError("Semua data input harus diisi");
     }
+  }
+
+  @override
+  void onInit() async {
+    super.onInit();
   }
 }
