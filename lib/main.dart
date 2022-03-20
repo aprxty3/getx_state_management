@@ -9,31 +9,34 @@ import 'package:getx_state_management/getx19_getStorage/route/app_route.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final loginC = Get.put(LoginC());
-  final authC = Get.put(AuthC());
+  // final loginC = Get.put(LoginC());
+  // final authC = Get.put(AuthC());
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: authC.autoLogin(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          return Obx(
-            () => GetMaterialApp(
-              theme: ThemeData.light(),
-              home: authC.isAuth.isTrue ? Get19_0() : Get19_1(),
-              getPages: AppPage.pages,
-            ),
-          );
-        }
-        return MaterialApp(
-          home: Scaffold(
-            body: Center(
-              child: CircularProgressIndicator(),
-            ),
-          ),
-        );
-      },
+    return GetMaterialApp(
+      home: Get19_0(),
     );
+    // return FutureBuilder(
+    //   future: authC.autoLogin(),
+    //   builder: (context, snapshot) {
+    //     if (snapshot.connectionState == ConnectionState.done) {
+    //       return Obx(
+    //         () => GetMaterialApp(
+    //           theme: ThemeData.light(),
+    //           home: authC.isAuth.isTrue ? Get19_0() : Get19_1(),
+    //           getPages: AppPage.pages,
+    //         ),
+    //       );
+    //     }
+    //     return MaterialApp(
+    //       home: Scaffold(
+    //         body: Center(
+    //           child: CircularProgressIndicator(),
+    //         ),
+    //       ),
+    //     );
+    //   },
+    // );
   }
 }
